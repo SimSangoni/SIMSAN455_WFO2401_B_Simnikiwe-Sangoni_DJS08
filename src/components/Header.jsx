@@ -1,5 +1,4 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
@@ -15,7 +14,6 @@ export default function Header(){
                     <Link to='/vans'>Vans</Link>
                 </nav>
             </header>
-            <Outlet />
         </>
         
     )
