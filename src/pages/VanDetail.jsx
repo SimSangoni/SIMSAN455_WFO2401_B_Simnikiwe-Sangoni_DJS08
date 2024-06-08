@@ -1,5 +1,6 @@
 import React from "react"
 import { useParams } from "react-router-dom"
+import capitalizeFirstLetter from "../utils"
 
 
 export default function VanDetail() {
@@ -20,7 +21,7 @@ export default function VanDetail() {
             {van ? (
                 <div className="van-detail">
                     <img src={van.imageUrl} />
-                    <i className={`van-type ${van.type[0].toUpperCase() + van.type.slice(1)} selected`}>{van.type}</i>
+                    <i className={`van-type ${van.type} selected`}>{capitalizeFirstLetter(van.type)}</i>
                     <h2>{van.name}</h2>
                     <p className="van-price"><span>${van.price}</span>/day</p>
                     <p>{van.description}</p>

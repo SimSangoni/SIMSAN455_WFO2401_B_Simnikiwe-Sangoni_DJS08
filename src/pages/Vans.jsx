@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import capitalizeFirstLetter from "../utils"
 
 
 
@@ -24,7 +25,7 @@ export default function Vans() {
                             <h2>{van.name}</h2>
                             <p>${van.price}<span>/day</span></p>
                         </div>
-                        <i className={`van-type ${van.type} selected`}>{van.type}</i>
+                        <i className={`van-type ${van.type} selected`}>{capitalizeFirstLetter(van.type)}</i>
                 </Link> 
             </div>
           
