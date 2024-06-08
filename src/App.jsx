@@ -11,7 +11,7 @@ import VanDetail from './pages/VanDetail';
 import Layout from './components/Layout';
 import HostLayout from './components/HostLayout'
 
-
+import Dashboard from './pages/Host/Dashboard'
 import Income from './pages/Host/Income'
 import Reviews from './pages/Host/Reviews'
 
@@ -22,19 +22,6 @@ import './server';
 
 function App() {
 
-  /**
-   * Challenge: Make the HostLayout component!
-   * The HostLayout should use Links to navigate to the following
-   * routes: 
-   *    * Dashboard ("/host")
-   *    * Income ("/host/income")
-   *    * Reviews ("/host/reviews")
-   * Then replace the parent "/host" route's element below with the
-   * new HostLayout component you made.
-   * 
-   * NOTE: The dashboard route/page will be gone for now, but don't fret.
-   * We'll be fixing that in the next lesson.
-   */
 
   return (
 
@@ -47,6 +34,7 @@ function App() {
             <Route path="/vans/:id" element={<VanDetail />} />
 
           <Route path='/host' element={< HostLayout/>}>
+            <Route path='/host' element={< Dashboard/>} />
             <Route path='/host/income' element={< Income/>} />
             <Route path='/host/reviews' element={< Reviews/>} />
           </Route>
