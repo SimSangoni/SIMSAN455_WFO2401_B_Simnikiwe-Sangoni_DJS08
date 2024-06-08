@@ -8,7 +8,7 @@ import Vans from './pages/Vans';
 import VanDetail from './pages/VanDetail';
 import Layout from './components/Layout';
 
-import Host from './pages/Host/Host'
+import Host from './pages/Host/Dashboard'
 import Income from './pages/Host/Income'
 import Reviews from './pages/Host/Reviews'
 
