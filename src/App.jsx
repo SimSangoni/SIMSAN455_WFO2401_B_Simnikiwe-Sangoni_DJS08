@@ -7,11 +7,11 @@ import About from './pages/About';
 import Vans from './pages/Vans';
 import VanDetail from './pages/VanDetail';
 import Host from './pages/Host';
-import Header from './components/Header';
-// import Layout from './components/Layout';
+import Layout from './components/Layout';
 
 
 import './server';
+
 
 
 
@@ -21,7 +21,7 @@ function App() {
 
     <BrowserRouter>
         <Routes>
-          <Route element={<Header />}>
+          <Route element={<Layout />}>
             <Route path="/" element={<Home/>}/>
             <Route path="/host" element={<Host/>}/>
             <Route path="/about" element={<About/>}/>
