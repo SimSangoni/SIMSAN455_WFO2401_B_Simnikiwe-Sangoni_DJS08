@@ -21,7 +21,7 @@ export default function Vans() {
                     priced at $${van.price} per day`}>
                         <img src={van.imageUrl} alt={`Image of ${van.name}`}/>
                         <div className="van-info">
-                            <h3>{van.name}</h3>
+                            <h2>{van.name}</h2>
                             <p>${van.price}<span>/day</span></p>
                         </div>
                         <i className={`van-type ${van.type} selected`}>{van.type}</i>
