@@ -1,11 +1,15 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link,  useSearchParams } from "react-router-dom"
 import capitalizeFirstLetter from "../utils"
 
 
 
 export default function Vans() {
+
+    const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
+
+    const typeFilter = searchParams.get('type')
 
     React.useEffect(function() {
         fetch("/api/vans")
@@ -13,7 +17,13 @@ export default function Vans() {
             .then(data => setVans(data.vans))
     }, [])
 
-    const vanElements = vans.map(van => {
+    const displayedVans = typeFilter ? 
+    vans.filter(van => van.type === typeFilter)
+    : vans
+
+
+
+    const vanElements = displayedVans.map(van => {
         return (
             <div key={van.id} className="van-tile">
                 <Link 
@@ -36,9 +46,16 @@ export default function Vans() {
     return (
     <div className="van-list-container">
         <h1>Explore our van options</h1>
+        <div className="van-list-filter-buttons">
+            <Link className="van-type simple" to="?type=simple">simple</Link>
+            <Link className="van-type simple" to="?type=luxury">luxury</Link> 
+            <Link className="van-type simple" to="?type=rugged">rugged</Link>  
+            <Link className="van-type clear-filters" to=".">clear</Link> 
+        </div>
         <div className="van-list">
             {vanElements}
         </div>
     </div>
     )
   }
+
