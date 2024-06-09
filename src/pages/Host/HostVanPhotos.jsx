@@ -6,7 +6,7 @@ export default function HostVanPhotos() {
     return (
         <div>
             <h2>Photos view here</h2>
-            <img src={currentVan.imageUrl}/>
+            <img src={currentVan.imageUrl} className="host-van-detail-image"/>
         </div>
     )
 };
