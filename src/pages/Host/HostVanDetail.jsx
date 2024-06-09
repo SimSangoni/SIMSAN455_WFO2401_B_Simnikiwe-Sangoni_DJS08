@@ -20,9 +20,16 @@ export default function HostVanDetail(){
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
                     <img src={currentVan.imageUrl}/>
+                    <div className="host-van-detail-info-text">
+                    <i
+                            className={`van-type van-type-${currentVan.type}`}
+                        >
+                            {currentVan.type}
+                    </i>
+                    </div>
                     <h2>{currentVan.name}</h2>
                     <p>{currentVan.price}</p>
-                    <p>{currentVan.type}</p>
+                
                 </div>
                 
             </div>
