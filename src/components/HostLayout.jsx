@@ -14,7 +14,7 @@ export default function Layout(){
         <div>
             <nav className="host-nav">
                 <NavLink 
-                to='/host' 
+                to='.' 
                 end
                 style={({isActive})=> isActive? activeStyle: null}
                 >
