@@ -1,6 +1,6 @@
 import React from "react";
-import { Outlet, useParams, Link } from "react-router-dom";
-import capitalizeFirstLetter from "../../utils";
+import { Outlet, useParams, Link, NavLink } from "react-router-dom";
+import capitalizeFirstLetter, {activeStyle} from "../../utils";
 
 export default function HostVanDetail(){
     const {id} = useParams()
@@ -37,6 +37,29 @@ export default function HostVanDetail(){
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>  
+                <nav className="host-van-detail-nav">
+                    <NavLink 
+                    to='.' 
+                    end
+                    style={({isActive})=> isActive? activeStyle: null}
+                    >
+                        Details
+                    </NavLink>
+                    <NavLink 
+                    to='pricing' 
+                    end
+                    style={({isActive})=> isActive? activeStyle: null}
+                    >
+                        Pricing
+                    </NavLink>
+                    <NavLink 
+                    to='photos' 
+                    end
+                    style={({isActive})=> isActive? activeStyle: null}
+                    >
+                        Photos
+                    </NavLink>
+                </nav>
                 <Outlet/>
             </div>
         </section>

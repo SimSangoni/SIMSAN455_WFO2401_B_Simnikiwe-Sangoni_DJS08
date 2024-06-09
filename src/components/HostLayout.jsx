@@ -1,14 +1,11 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
+import {activeStyle} from "../utils";
 
 
 export default function Layout(){
 
-    const activeStyle = {
-        fontWeight: "bold",
-        textDecoration: "underline",
-        color: "#161616"
-    }
+ 
 
     return (
         <div>
