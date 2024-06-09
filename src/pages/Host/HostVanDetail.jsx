@@ -11,10 +11,14 @@ export default function HostVanDetail(){
             .then(data => setCurrentVan(data.vans))
     }, [])
 
+    if (!currentVan) {
+        return <h1>Loading...</h1>
+    }
+
     return (
         <div>
-            <h1>Your Host Van Details page is here</h1>
-            <img src={currentVan.imageUrl} />
+            <img src={currentVan.imageUrl} width={150}/>
+            <h2>{currentVan.name}</h2>
         </div>
     )
 }
