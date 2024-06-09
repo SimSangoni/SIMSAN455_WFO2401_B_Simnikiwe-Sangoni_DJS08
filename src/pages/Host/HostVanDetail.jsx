@@ -16,11 +16,16 @@ export default function HostVanDetail(){
     }
 
     return (
-        <div>
-            <img src={currentVan.imageUrl} width={150}/>
-            <h2>{currentVan.name}</h2>
-            <p>{currentVan.price}</p>
-            <p>{currentVan.type}</p>
-        </div>
+        <section>
+            <div className="host-van-detail-layout-container">
+                <div className="host-van-detail">
+                    <img src={currentVan.imageUrl}/>
+                    <h2>{currentVan.name}</h2>
+                    <p>{currentVan.price}</p>
+                    <p>{currentVan.type}</p>
+                </div>
+                
+            </div>
+        </section>
     )
 }
