@@ -1,7 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams, Link } from "react-router-dom";
 import capitalizeFirstLetter from "../../utils";
-import { Link } from "react-router-dom";
 
 export default function HostVanDetail(){
     const {id} = useParams()
@@ -38,6 +37,7 @@ export default function HostVanDetail(){
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>  
+                <Outlet/>
             </div>
         </section>
     )

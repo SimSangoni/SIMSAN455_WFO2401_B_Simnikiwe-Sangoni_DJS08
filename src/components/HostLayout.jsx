@@ -40,6 +40,7 @@ export default function Layout(){
                 </NavLink>
             </nav>
             <Outlet />
+           
         </div>
     )
 }
