@@ -58,7 +58,7 @@ export default function HostVanDetail(){
                         Photos
                     </NavLink>
                 </nav>
-                <Outlet context={[currentVan, setCurrentVan]}/>
+                <Outlet context={{currentVan}}/>
             </div>
         </section>
     )
