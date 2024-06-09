@@ -47,14 +47,12 @@ export default function HostVanDetail(){
                     </NavLink>
                     <NavLink 
                     to='pricing' 
-                    end
                     style={({isActive})=> isActive? activeStyle: null}
                     >
                         Pricing
                     </NavLink>
                     <NavLink 
                     to='photos' 
-                    end
                     style={({isActive})=> isActive? activeStyle: null}
                     >
                         Photos
