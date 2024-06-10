@@ -1,6 +1,16 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(() => resolve(), ms))
-}
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAQIvMwAGlnH2Zlzw674gTgBreFzQ4_JNU",
+  authDomain: "vanlife-5efb8.firebaseapp.com",
+  projectId: "vanlife-5efb8",
+  storageBucket: "vanlife-5efb8.appspot.com",
+  messagingSenderId: "12534045624",
+  appId: "1:12534045624:web:7d4f92ef60b77063f40d4d"
+};
+
+const app = initializeApp(firebaseConfig);
+
 
 export async function getVans(id) {
     const url = id ? `/api/vans/${id}` : "/api/vans"
