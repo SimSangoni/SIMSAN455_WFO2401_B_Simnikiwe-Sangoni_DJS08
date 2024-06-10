@@ -11,10 +11,20 @@ export default function HostVanDetail(){
     
     
     React.useEffect(() => {
-        fetch(`/api/host/vans/${id}`)
-            .then(res => res.json())
-            .then(data => setCurrentVan(data.vans))
-    }, [])
+        async function loadVans() {
+            setLoading(true)
+            try {
+                const data = await getHostVans(id)
+                setCurrentVan(data)
+            } catch (err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+
+        loadVans()
+    }, [id])
 
     if (!currentVan) {
         return <h1>Loading...</h1>
