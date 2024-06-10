@@ -1,3 +1,7 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(() => resolve(), ms))
+}
+
 export async function getVans() {
     const res = await fetch("/api/vans")
     if (!res.ok) {
