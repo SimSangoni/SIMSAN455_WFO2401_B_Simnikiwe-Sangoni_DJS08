@@ -76,7 +76,7 @@ export default function Vans() {
         return <h1>Loading...</h1>
     }
     if (error) {
-        return <h1>There was an error: {error} </h1>
+        return <h1>There was an error: {error.message} </h1>
     }
 
     return (

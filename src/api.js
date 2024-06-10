@@ -4,10 +4,9 @@ export async function getVans() {
         throw {
             message: "Failed to fetch vans",
             statusText: res.statusText,
-            status: res.status
+            status: res.status,
         }
     }
     const data = await res.json()
-    return data.vans
-           
+    return data.vans        
 }
