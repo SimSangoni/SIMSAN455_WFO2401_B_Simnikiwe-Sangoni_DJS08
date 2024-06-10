@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function HostVans(){
     const [vans, setVans] = React.useState([])
@@ -11,8 +11,8 @@ export default function HostVans(){
     }, [])
 
     const hostVansEls = vans.map(van => (
-        <Link
-            to={`/host/vans/${van.id}`}
+        <NavLink
+            to={`${van.id}`}
             key={van.id}
             className="host-van-link-wrapper"
         >
@@ -23,7 +23,7 @@ export default function HostVans(){
                     <p>${van.price}/day</p>
                 </div>
             </div>
-        </Link>
+        </NavLink>
     ))
 
     return (
