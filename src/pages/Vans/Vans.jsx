@@ -21,11 +21,12 @@ export default function Vans() {
                 const data = await getVans()
                 setVans(data)
             } catch (err) {
-                console.log("There was an error")
-                console.log(err)
+                setError(err)
+            } finally {
+                setLoading(false)
             }
             
-            setLoading(false)
+            
         }
 
         loadVans()
@@ -73,6 +74,9 @@ export default function Vans() {
 
     if (loading) {
         return <h1>Loading...</h1>
+    }
+    if (error) {
+        return <h1>There was an error: {error} </h1>
     }
 
     return (
