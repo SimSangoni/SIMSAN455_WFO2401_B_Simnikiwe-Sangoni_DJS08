@@ -41,29 +41,18 @@ export default function Vans() {
           
         )
     })
-    
 
-    function genNewSearchParamString(key, value) {
-        const sp = new URLSearchParams(searchParams)
-        if (value === null) {
-            sp.delete(key)
-        } else {
-            sp.set(key, value)
+
+    function handleFilterChange(key, value) {
+        setSearchParams(prevParams => {
+            if (value === null) {
+            prevParams.delete(key)
+            } else {
+            prevParams.set(key, value)
+            }
+            return prevParams
+        })
         }
-        return `?${sp.toString()}`
-        }
-
-
-        function handleFilterChange(key, value) {
-            setSearchParams(prevParams => {
-              if (value === null) {
-                prevParams.delete(key)
-              } else {
-                prevParams.set(key, value)
-              }
-              return prevParams
-            })
-          }
 
     return (
     <div className="van-list-container">
