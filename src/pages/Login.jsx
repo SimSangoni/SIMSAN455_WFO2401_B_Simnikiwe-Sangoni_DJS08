@@ -6,6 +6,7 @@ export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const [status, setStatus] = React.useState("idle")
     const [error, setError] = React.useState(null)
+
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -21,7 +22,7 @@ export default function Login() {
             .catch((err) => {
                 setError(err)
             })
-            .finally( ()=> {
+            .finally(()=> {
                 setStatus("idle")
             })
     }
