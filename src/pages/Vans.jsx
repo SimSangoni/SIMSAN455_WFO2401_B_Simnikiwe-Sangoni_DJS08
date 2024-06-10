@@ -42,7 +42,16 @@ export default function Vans() {
         )
     })
     
-    // <button onClick={() => setSearchParams({type: "jedi"})}>Jedi</button>
+
+    function genNewSearchParamString(key, value) {
+        const sp = new URLSearchParams(searchParams)
+        if (value === null) {
+            sp.delete(key)
+        } else {
+            sp.set(key, value)
+        }
+        return `?${sp.toString()}`
+        }
 
     return (
     <div className="van-list-container">
@@ -59,4 +68,7 @@ export default function Vans() {
     </div>
     )
   }
+
+
+
 
