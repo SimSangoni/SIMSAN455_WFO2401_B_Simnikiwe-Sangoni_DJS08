@@ -10,6 +10,7 @@ export default function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
+        setStatus("submitting")
         loginUser(loginFormData)
             .then(data => console.log(data))
     }
