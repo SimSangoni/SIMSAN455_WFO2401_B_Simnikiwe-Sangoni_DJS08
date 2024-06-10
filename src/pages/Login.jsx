@@ -5,6 +5,7 @@ import { loginUser } from "../api"
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const [status, setStatus] = React.useState("idle")
+    const [error, setError] = React.useState(null)
     const location = useLocation()
     console.log(location)
 
@@ -13,7 +14,7 @@ export default function Login() {
         setStatus("submitting")
         loginUser(loginFormData)
             .then(data => {
-                console.log(data)
+                // console.log(data)
             }).finally( ()=> {
                 setStatus("idle")
             })
