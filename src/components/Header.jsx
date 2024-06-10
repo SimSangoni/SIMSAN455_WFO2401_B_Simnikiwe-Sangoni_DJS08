@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import loginIcon from "../assets/images/avatar-icon.png"
+import { fakeLogOut } from "../utils";
 
 
 export default function Header(){
@@ -34,6 +35,7 @@ export default function Header(){
                         src={loginIcon} 
                         className="login-icon"/>
                     </Link>
+                    <button onClick={fakeLogOut}>X</button>
                 </nav>
             </header>
         </>

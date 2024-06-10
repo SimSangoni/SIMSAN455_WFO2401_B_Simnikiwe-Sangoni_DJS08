@@ -12,3 +12,7 @@ const activeStyle = {
 }
 
 export {activeStyle}
+
+export function fakeLogOut() {
+  localStorage.removeItem("loggedin")
+}
