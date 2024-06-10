@@ -13,8 +13,9 @@ export default function Login() {
         setStatus("submitting")
         loginUser(loginFormData)
             .then(data => {
-                setStatus("idle")
                 console.log(data)
+            }).finally( ()=> {
+                setStatus("idle")
             })
     }
     
