@@ -56,12 +56,7 @@ function App() {
                   <Route path='photos' element={< HostVanPhotos/>}/>
                 </Route>
             </Route>
-
-
             </Route>
-
-            
-
             <Route path='*' element={< NotFound />}/>
          
           </Route> 
