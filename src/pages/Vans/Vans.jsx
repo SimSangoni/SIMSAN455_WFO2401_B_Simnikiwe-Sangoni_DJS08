@@ -15,6 +15,7 @@ export default function Vans() {
 
     React.useEffect(() => {
         async function loadVans() {
+            setLoading(true)
             const data = await getVans()
             setVans(data)
             setLoading(false)
@@ -61,7 +62,7 @@ export default function Vans() {
             }
             return prevParams
         })
-        }
+    }
 
     if (loading) {
         return <h1>Loading...</h1>
