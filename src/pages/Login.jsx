@@ -15,7 +15,6 @@ export default function Login() {
         setStatus("submitting")
         loginUser(loginFormData)
             .then(data => {
-                // console.log(data)
                 setError(null)
                 navigate("/host")
             })
