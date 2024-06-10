@@ -12,7 +12,10 @@ export default function Login() {
         e.preventDefault()
         setStatus("submitting")
         loginUser(loginFormData)
-            .then(data => console.log(data))
+            .then(data => {
+                setStatus("idle")
+                console.log(data)
+            })
     }
     
 
