@@ -9,8 +9,10 @@ export default function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(loginFormData)
+        loginUser(loginFormData)
+            .then(data => console.log(data))
     }
+    
 
     function handleChange(e) {
         const { name, value } = e.target
