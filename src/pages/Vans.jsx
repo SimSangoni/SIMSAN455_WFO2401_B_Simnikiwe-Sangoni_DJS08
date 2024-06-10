@@ -1,5 +1,5 @@
 import React from "react"
-import { NavLink,  useSearchParams } from "react-router-dom"
+import { Link,  useSearchParams } from "react-router-dom"
 import capitalizeFirstLetter from "../utils"
 
 
@@ -26,8 +26,8 @@ export default function Vans() {
     const vanElements = displayedVans.map(van => {
         return (
             <div key={van.id} className="van-tile">
-                <NavLink 
-                    to={`${van.id}`}
+                <Link 
+                    to={van.id}
                     aria-label={`View details for ${van.name}, 
                     priced at $${van.price} per day`}>
                         <img src={van.imageUrl} alt={`Image of ${van.name}`}/>
@@ -36,7 +36,7 @@ export default function Vans() {
                             <p>${van.price}<span>/day</span></p>
                         </div>
                         <i className={`van-type ${van.type} selected`}>{capitalizeFirstLetter(van.type)}</i>
-                </NavLink> 
+                </Link> 
             </div>
           
         )
