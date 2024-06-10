@@ -1,10 +1,13 @@
 import React from "react";
 import { Outlet, useParams, Link, NavLink } from "react-router-dom";
 import capitalizeFirstLetter, {activeStyle} from "../../utils";
+import { getHostVans } from "../../api"
 
 export default function HostVanDetail(){
     const {id} = useParams()
     const [currentVan, setCurrentVan] = React.useState(null)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
     
     
     React.useEffect(() => {
