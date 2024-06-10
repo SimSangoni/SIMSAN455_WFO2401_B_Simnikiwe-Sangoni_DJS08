@@ -38,6 +38,14 @@ export default function HostVans(){
         </Link>
     ))
 
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+
+    if (error) {
+        return <h1>There was an error: {error.message}</h1>
+    }
+
     return (
         <section>
             <h1 className="host-vans-title">Your listed vans</h1>
