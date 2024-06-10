@@ -1,12 +1,16 @@
 import React from "react"
 import { useParams, Link, useLocation } from "react-router-dom"
 import capitalizeFirstLetter from "../../utils"
+import { getVans } from "../../api"
 
 
 export default function VanDetail() {
-    const params = useParams()
+    const {id} = useParams()
     const location = useLocation()
     const [van, setVan] = React.useState(null)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    
     
     React.useEffect(()=>{
         fetch(`/api/vans/${params.id}`)
