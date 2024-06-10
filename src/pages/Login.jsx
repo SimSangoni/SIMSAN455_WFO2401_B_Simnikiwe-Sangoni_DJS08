@@ -18,7 +18,7 @@ export default function Login() {
             .then(data => {
                 setError(null)
                 localStorage.setItem("loggedin", true)
-                navigate("/host", { replace: true })
+                navigate(from, "/host", { replace: true })
             })
             .catch((err) => {
                 setError(err)

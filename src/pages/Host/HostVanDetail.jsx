@@ -42,7 +42,7 @@ export default function HostVanDetail(){
                 className="back-button"
             >&larr; <span>Back to all vans</span></Link>
 
-            <div className="host-van-detail-layout-container">
+           {currentVan && <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
                     <img src={currentVan.imageUrl}/>
                     <div className="host-van-detail-info-text">
@@ -77,7 +77,7 @@ export default function HostVanDetail(){
                     </NavLink>
                 </nav>
                 <Outlet context={{currentVan}}/>
-            </div>
+            </div>}
         </section>
     )
 }
