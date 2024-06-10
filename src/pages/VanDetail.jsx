@@ -16,11 +16,12 @@ export default function VanDetail() {
         [params.id]
     )
     
+    const search = location.state?.search || ""
 
     return (
         <div className="van-detail-container">
             <Link
-                to={`..`}
+                to={`..${search}`}
                 relative="path"
                 className="back-button"
             >&larr; <span>Back to all vans</span></Link>
