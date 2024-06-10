@@ -1,6 +1,6 @@
 import React from "react"
 import { useParams, Link, useLocation } from "react-router-dom"
-import capitalizeFirstLetter from "../utils"
+import capitalizeFirstLetter from "../../utils"
 
 
 export default function VanDetail() {

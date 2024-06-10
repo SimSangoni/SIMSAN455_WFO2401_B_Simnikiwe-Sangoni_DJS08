@@ -1,6 +1,6 @@
 import React from "react"
 import { Link,  useSearchParams } from "react-router-dom"
-import capitalizeFirstLetter from "../utils"
+import capitalizeFirstLetter from "../../utils"
 
 
 

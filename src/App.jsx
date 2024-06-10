@@ -1,11 +1,12 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes, Link} from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 // PAGE COMPONENT IMPORTS
 import Home from './pages/Home';
 import About from './pages/About';
-import Vans from './pages/Vans';
-import VanDetail from './pages/VanDetail';
+import Vans from './pages/Vans/Vans';
+import VanDetail from './pages/Vans/VanDetail';
+import NotFound from './pages/NotFound';
 
 // LAY OUT COMPONENT IMPORTS
 import Layout from './components/Layout';
@@ -52,7 +53,7 @@ function App() {
               </Route>
             </Route>
 
-            <Route path='*' element={<h1>Page not found!</h1>}/>
+            <Route path='*' element={< NotFound />}/>
          
           </Route> 
         </Routes>
