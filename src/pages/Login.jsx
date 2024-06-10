@@ -19,15 +19,12 @@ export default function Login() {
         }))
     }
 
-    // if (location.state.message) {
-    //     return <h1>{location.state.message}</h1>
-    // }
 
     return (
         <div className="login-container">
             {
                 location.state?.message && 
-                <h3>{location.state.message}</h3>
+                <h3 className="login-first">{location.state.message}</h3>
             }
             <h1>Sign in to your account</h1>
             <form onSubmit={handleSubmit} className="login-form">
