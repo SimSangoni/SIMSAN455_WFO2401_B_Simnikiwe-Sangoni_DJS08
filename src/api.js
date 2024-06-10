@@ -20,9 +20,12 @@ const vansCollectionRef = collection(db, "vans")
 
 export async function getVans() {
     const snapshot = await getDocs(vansCollectionRef)
-    snapshot.docs.map(doc => ({
-        ...doc.data()
+    const vans = snapshot.docs.map(doc => ({
+        ...doc.data(),
+        id: doc.id
     }))
+
+    console.log(vans)
 }
 
 
